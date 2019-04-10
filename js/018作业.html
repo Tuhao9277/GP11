@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	
+	<body>
+		年月：
+		<input id="timeInput" type="text"/>
+	
+		
+		<button onclick="exec()">计算</button>
+	</body>
+	
+	<script>
+	
+		//根据一个数字日期，判断这个日期是这一年的第几天
+		//例如： "20160211"，计算后结果为42
+		// 2016  02  11
+		
+		function exec(){
+			var num = Number(timeInput.value);
+			
+			var date = num%100; //日期
+			var month = parseInt(num/100)%100; //月份
+			var year = parseInt(num/10000); //年份
+			
+			var totalDays = 0; //总共有多少天
+			
+			
+			/*
+				如果这里month不减1，那么后果是：
+				例如：20161211
+				取出月份为12
+				匹配switch的case  12
+				但实际上， 1211号，应该是1~~11月 再加 11天
+				
+			*/
+			
+			switch(month-1) { 
+				case 11 : totalDays += 30;
+				case 10 : totalDays += 31;
+				case 9 : totalDays += 30;
+				case 8 : totalDays += 31;
+				case 7 : totalDays += 31;
+				case 6 : totalDays += 30;
+				case 5 : totalDays += 31;
+				case 4 : totalDays += 30;
+				case 3 : totalDays += 31;
+				case 2 : {
+					if(year%400==0 || (year%4==0 && year%100!=0) ){
+						totalDays += 29;
+					} else {
+						totalDays += 28;
+					}
+				}
+				case 1 : totalDays += 31;
+			}
+			
+			totalDays += date;
+			
+			console.log(totalDays);
+		}
+			
+	</script>
+	
+	
+</html>
+
+
+

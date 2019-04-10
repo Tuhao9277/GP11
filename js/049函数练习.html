@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	
+	<script>
+		//编写一个函数，计算任意两个数字之间所能组成的奇数个数，数字必须是个位数。
+		//比如：计算0~3之间能组成的奇数是： 01、03、13、21、23、31
+		//5,9
+		var m = 0;
+		var n = 3;
+		for(var i=m; i<=n; i++){
+			for(var j=m; j<=n; j++) {
+				if( (i*10+j)%2 != 0 && i!=j){
+					console.log(i+""+j);
+				}
+			}
+		}
+		
+		
+		//编写函数计算一个数字的长度
+		//2876 ==> 287.6 ==> 28.7 ==> 2.8 ==> 0
+		function computeLength(num){
+			var count = 0;
+			while( true ){
+				count++;
+				num = parseInt(num/10);
+				if(num == 0) break;
+			}
+			return count;
+		}
+		
+		
+	</script>
+	
+</html>

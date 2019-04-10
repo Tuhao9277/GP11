@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+	
+	<script>
+		//求100-999之间的水仙花数。abc = a^3 + b^3 + c^3
+		
+		for(var i=100; i<=999; i++){
+			var a1 = i%10;
+			var a2 = parseInt(i/10)%10;
+			var a3 = parseInt(i/100);
+			
+			if( i === (a1*a1*a1 + a2*a2*a2 + a3*a3*a3) ){
+				console.log(i);
+			}
+		}
+		
+	</script>
+	
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{ height:auto; border:1px solid #333; margin:0 auto;}
+			.left{width: 200px; height: 300px; float:left; background: #ff0;}
+			.right{width: 750px; height: 600px; float:right; background: #FF00FF;}
+			.clear:after{content: ""; display: block; clear: both;height: 0; visibility:hidden;}
+			.clear{zoom: 1;}
+			.text{width:200px;height: auto; background: #00f; margin:20px auto; position: relative; visibility: collapse;}
+			/*.text:before{ content: "1111111111"; color: #ff0;}*/
+			.text:after{content: "";display: block; width:0; height: 0; border-top:4px solid #ff0; border-left:3px solid transparent; border-right:3px solid transparent; position: absolute; right:0; bottom:0;}
+			.text:first-letter{color:paleturquoise; font-size: 50px;}
+			.text:first-line{color: pink;font-size: 20px;
+			
+			}
+			/*
+			 * width:宽度
+			 * min-width最小宽度
+			 * max-width最大宽度
+			 * 
+			 * height:高度
+			 * min-height最小高度
+			 * max-height最大高度
+			 */
+		</style>
+	</head>
+	<body>
+		
+		<div class="text">
+			
+			<span>会</span>使对象不可见，但该对象在网页所占的空间没有改变会使对象不可见，但该对象在网页所占的空间没有改变
+		</div>
+		<div class="wrap clear">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</body>
+</html>

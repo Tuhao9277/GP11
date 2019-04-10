@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	
+	<script>
+		
+		var a1 = 10;
+
+		function f(){
+			var a2 = 20;
+			console.log(++a2); //21
+		}
+		
+		f();
+		function f2(a3){
+			console.log(++a3); //11
+		}
+		f2(a1);
+		
+		console.log(a1); //10
+		
+		
+		fn();
+		var x = 0;
+		function fn(){
+			var x= 10;
+			function fn2(){
+				var x = 20;
+				function fn3(){
+					console.log("x="+x); //0
+				}
+				fn3();
+			}
+			fn2()
+		}
+		
+		
+		
+		
+		
+	</script>
+	
+</html>

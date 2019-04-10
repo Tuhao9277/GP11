@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{width:100px;height:100px;background: #f0f; position: relative;
+			left:0px;
+			top:50px;
+			z-index: 10;
+			}
+			/*相对定位
+			 *特点：
+			 * 1、相对定位的元素遵循正常的文档流，不脱离文档流。
+			 * 2、相对定位的元素可以根据偏移的属性做位置的移动，相对自己原来的位置做的偏移。
+			 * 3、相对定位的元素无论移动到任何位置，所占的空间依然是原来的空间。
+			 * 4、相对定位的元素也可以根据z-index的属性来调整元素显示 的层叠效果。
+			 */
+			.box2{width:200px; height: 150px; background: #0ff; position: relative; }
+		</style>
+	</head>
+	<body>
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		
+	</body>
+</html>

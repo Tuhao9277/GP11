@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*html{margin:30px;}*/
+			body{background: #00f;}
+			*{margin:0; padding:0;}
+			/*div{width: 200px; height: 300px; border:2px solid #333; background: #ff0;}*/
+			.box1{
+				position: absolute;
+				z-index: 5;/*用来控制定位元素的上下层叠顺序，属性值越大，层的顺序越靠上，属性值 为没有单位的整数值*/
+				left:;
+				right:;
+				top:;
+				bottom:;
+				}
+			.box2{width: 300px; height: 200px;position: absolute; background: #f00; z-index: -10;}
+				/*
+				 * 绝对定位：absolute
+				 * 特点：
+				 * 1、完全脱离文档流
+				 * 2、位置的偏移参照浏览的窗口
+				 * 3、根据离自己最近并设置了定位的父容器进行位置的偏移，如果没有再去找浏览器的窗口
+				 */
+			.news{width:226px; height: 160px; background:#f00; border:1px solid #f00; margin:50px auto; position: relative;}
+			.news img{width:100%; height: 100%;}
+			.news p{width:100%; height: 30px; background: rgba(0,0,0,0.5);
+			position: absolute;
+			bottom:0;
+			left:0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			定位：
+			当元素有层叠显示时
+			定位：position:属性值；
+			层叠：z-index
+			位移：left,right,top,bottom
+		-->
+		<!--<div class="box1">1</div>
+		<div class="box2">2</div>-->
+		<div class="news">
+			<img src="img/detail0_3_03.jpg" alt="" />
+			<p>文本内容</p>
+		</div>
+		<div class="news">
+			<img src="img/detail0_3_03.jpg" alt="" />
+			<p>文本内容</p>
+		</div>
+		<div class="news">
+			<img src="img/detail0_3_03.jpg" alt="" />
+			<p>文本内容</p>
+		</div>
+	</body>
+</html>

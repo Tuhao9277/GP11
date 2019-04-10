@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		宽高自适应
+		1、概念：有时候我们希望元素的大小能够根据窗口，内容，设备自适应，能够使页面显示的更灵活，适应不同的设备；
+		2、块元素：width:auto;适应父元素的宽度 height:auto;适应内容高度
+		3、但当子元素有浮动时候，父元素高度塌陷。
+		解决方法：
+		    1）父元素加overflow:hidden;缺点：溢出的内容会隐藏；
+		    2）在浮动元素的后边加一个空的块元素，为其设置clear:both; height:0; overflow:hidden;缺点：多一个dom节点，降低代码的可读性
+		    3）父元素:after{content:"";display:block;clear:both; height:0; visibility:hidden;/overflow:hidden;}
+		      兼容IE低版本：父元素{zoom:1;}
+		4.元素的高度能够适应窗口的高度html,body,元素{height:100%;} 
+		
+		5、min-height,min-width,max-height,max-width; 
+		6、过滤器：_IE6-
+		   ！important标准浏览器
+		  *+IE7-
+		  /9  /0
+		布局里常问的面试题:圣杯布局，双飞翼布局
+		A、两侧宽度固定，中间宽度自适应
+        B、 中间部分在DOM结构上优先，以便先行渲染
+        C、允许三列中的任意一列成为最高列
+        
+                盒子模型的计算方式：box-sizing:content-box(border*2+padding*2+content),border-box(content)
+                
+         cursor:改变鼠标指针
+         pointer-events:auto/none;
+         none:穿透当前元素
+         opacity:0~1;0.5, .5
+         filter:alpha(opacity=0~100)
+         插入flash
+         <object>
+         	<embed src="" type="" width="" height="" wmode="transparent" />
+         </object>
+         <marquee behavior=""width="" height="" scrollamount="" onmouseover="" onmouseout="" direction=""></marquee>
+         
+         
+         
+         calc();函数
+         width:max-content,min-content,fit-content.
+		
+	
+	</body>
+</html>

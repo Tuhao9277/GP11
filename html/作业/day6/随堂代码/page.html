@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+独占一行的标签称块元素
+div,h1~h6,p,ul,li,ol,dl,dt,dd,form,table,tr,td,fieldset,hr,legend
+块元素的特点：
+独占一行
+可以直接设置宽高
+一般情况下，块元素作为一个盒子来用的。
+p标签里只能嵌套内联元素
+标题标签里不能嵌套其它的标题标签
+
+
+
+一行内可以显示多个的标签内联元素
+a,em,i,b,span,strong,sub,sup,del,img,input,textarea,select,option,u, button,s,br
+一行内可以显示多个内联元素
+大部分的内联元素不能直接设置宽高
+一般情况下，内联元素装文本类型的内容。
+内联元素能正常填加上盒模型里的属性，但上下方向的属性，只是有显示的作用，但没有布局的作用
+input,img里不能浅谈任何其它的标签 （空标签不能嵌套）
+a标签里不能嵌套A标签
+
+<div></div>
+<p></p>
+<h1>
+	<h2></h2>
+</h1>
+<h3>
+	<p></p>
+</h3>
+<h1>
+	<div></div>
+</h1>
+<ul>
+	<li></li>
+</ul>
+<ol>
+	<li></li>
+</ol>
+<dl>
+	<dt></dt>
+	<dd></dd>
+</dl>
+<form action="">
+	<fieldset>
+		<legend></legend>
+	</fieldset>
+	<label for=""></label>
+	<input type="text" />
+	<textarea name="" rows="" cols=""></textarea>
+	<select name="" id="">
+		<option value=""></option>
+	</select>
+	<button></button>
+</form>
+<table>
+	<thead></thead>
+	<tbody></tbody>
+	<tr>
+		<td></td>
+		<th></th>
+	</tr>
+	<tfoot></tfoot>
+</table>
+<hr />
+<br />
+
+<em></em>
+<i></i>
+<b></b><u></u><s></s><a href=""></a>
+<img src="" alt="" />
+<strong></strong>
+<span></span><del></del><sub></sub><sup></sup>
+
+</body>
+</html>

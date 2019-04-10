@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+/*
+a:link{color:#f00;}
+a:visited{color:#ff0;}
+a:hover{color:#0f0;}
+a:active{color:#00f;}
+*/
+a{color:#33C;}/*0001*/
+a:hover{color:yellow;}/*0010*/
+.box{width:500px; height:400px;background:#00f;}/*0010*/
+#wrap{width:800px; height:100px;background:#0f0;}/*0100*/
+
+.box p{ width:100px;height:100px; }/*后代选择器的权值是各选择器的权值之和*/
+/*#wrap p{background:#609;}*/
+
+.box>.text{background:#000;}
+#wrap p{ background:#f00;}
+
+
+.text{ border:3px solid #00f;}
+p.text{border:30px solid #ff0;}/*交集选择器*/
+</style>
+</head>
+
+<body>
+<h2><a href="#">我是超链接</a></h2>
+
+
+
+
+<div id="wrap" class="box">
+	<p class="text">
+    	<span></span>
+    </p>
+    <span></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

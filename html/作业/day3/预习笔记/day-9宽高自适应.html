@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>宽高自适应</title>
+</head>
+
+<body>
+<h2> 一、宽高自适应</h2>
+<h3>网页布局中经常要定义元素的宽和高。但很多时候我们希望元素的大小能够根据窗口或子元素自动调整，这就是自适应。</h3>
+<h3>它能够使网页显示更灵活，可以适应在不同设备、不同窗口和不同分辨率下显示。</h3>
+<h3>（1）宽度自适应</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;块元素宽度默认为auto</h3>
+<h3>(2) 高度自适应</h3>
+<h3>元素{height:auto;}/高度不写</h3>
+<h3>&nbsp;</h3>
+<p>&nbsp;</p>
+<h3>二、浮动元素父元素高度自适应（父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷）</h3>
+<h2>解决高度塌陷的方法（清除浮动的方法）：</h2>
+<h3>方法1：给父元素添加声明overflow:hidden;(缺点：会隐藏溢出的元素)</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>hack2:在浮动元素下方添加空块元素,并给该元素添加声明：clear:both;height:0;overflow:hidden;</h3>
+<p>（缺点：在结构里增加了空的标签，不利于代码可读性，且降低了浏览器的性能）</p>
+<p>&nbsp;</p>
+<h3>hack3:万能清除浮动法</h3>
+<h3>选择符:after{content:".";clear:both;display:block;height:0;visibility:hidden; }</h3>
+<h3>父容器选择符{zoom:1;}/*为了兼容IE6,IE7*/</h3>
+<p>&nbsp;</p>
+<h3>三、伪类选择符/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::伪元素或叫伪对象</h3>
+<h3>1）:after(与content属性一起使用，定义在对象后的内容。)</h3>
+<h3>如：div:after{content:url(logo.jpg);}</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;div:after{content:&quot;文本内容&quot;;}</h3>
+<h3>2）:before:与content属性一起使用，定义在对象前的内容。</h3>
+<h3>如：div:before{content:&quot;在其前放内容&quot;;}</h3>
+<h3>3）：first-letter:定义对象内第一个字符的样式。</h3>
+<h3>4）：first-line:定义对象内第一行的样式。</h3>
+<h3>说明：</h3>
+<h3>*(:first-letter;:first-line该伪类只能用于块级元素。)</h3>
+<h3>四、visibility:hidden/visible/inherit;隐藏/可见</h3>
+<h3>visibility:hidden;和display:none;的区别：</h3>
+<h3>visibility:hidden;属性会使对象不可见，但该对象在网页所占的空间没有改变，而 display:none属性会隐藏内容且空间消失。</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>三、元素具备最小高度最小宽度，最大高度，最大宽度的自适应</h3>
+<h3>min-height属性：最小高度；</h3>
+<h3>min-width:最小宽度</h3>
+<h3>max-height:最大高度</h3>
+<h3>max-width:最大宽度</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>注：IE6及以下版本不识别该组属性。</h3>
+<h3>注：height属性在IE6里就类似min-height作用。</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>四、Filter:表示过滤器的意思，它是一种对特定的浏览器或浏览器组显示或隐藏规则或声明的方法。</h3>
+<h3>本质上讲，Filter是一种用来过滤不同浏览器的Hack类型。</h3>
+<h3>-----、过滤器(filter)</h3>
+<h3> <strong>1</strong>）<strong>下划线属性过滤器<br />
+</strong>    当在一个属性前面增加了一个下划线后，由于符合标准的浏览器不能识别带有下划线的属性而忽略了这个声明，但是在IE6及更低版本浏览器中会继续解析这个规则。</h3>
+<h3>语法：选择符{_属性：属性值；}</h3>
+<h3><strong>2）!important关键字过滤器</strong><br />
+  它表示所附加的声明具有最高优先级的意思。但由于IE6及更低版本不能识别它(important)，我们可以利用IE6的这个Bug作为过滤器来兼容ＩＥ６和其它标准浏览器。</h3>
+<h3>语法：选择符{属性：属性值!important;}</h3>
+<h3>兼容元素具备最小高度自适应的方法：</h3>
+<h3>hack1:min-height:value; _height:value;</h3>
+<h3>hack2:min-height:value;  height:auto!important;   height:value;(建议使用)</h3>
+<p>&nbsp;</p>
+<h3>3）*/+属性过滤器</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;当在一个属性前面增加了*后，该属性只能被IE7及以下版本浏览器识别，其它浏览器忽略该属性的作用。</h3>
+<h3>语法：选择符{*属性：属性值；}</h3>
+<h3 style="color:#f00;">4)扩展内容</h3>
+<h3>\9：IE9以下的&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 语法：选择符{属性：属性值\9;}</h3>
+<h3>\0:IE8 及以上   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;语法：选择符{属性：属性值\0;}</h3>
+<h3>&nbsp;</h3>
+<h3>五、元素高度自适应窗口高度</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设置方法：html,body{height:100%;}</h3>
+<h3>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2)自适应元素高度：height:100%;</h3>
+<p>&nbsp;</p>
+<h2>扩展：</h2>
+<h3>六、&lt;iframe&gt; 标签   框架</h3>
+<h3>语法：&lt;iframe   src="规定在 iframe 中显示的文档的 URL(默认的显示页面)" width="" height=""     frameborder="1/0"   name="iframe名称"     scrolling="yes/no/auto"&gt;   &lt;/iframe&gt;</h3>
+<h3>frameborder="1/0"   1代表有框架边框 /0代表无框架边框</h3>
+<h3>滚动条：scrolling="yes/no/auto" yes :有    no:无    auto：自动</h3>
+<h3>&lt;a href="" target="iframe的name属性值"&gt;&lt;/a&gt;表示超链接的目标地址在框架中打开</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>七、（BFC）</h2>
+<h3>block Formatting Context 块级格式化上下文</h3>
+<p>haslayout</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>&nbsp;</h2>
+</body>
+</html>

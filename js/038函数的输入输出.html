@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	
+	<script>
+		//
+		/*
+		document.write("123");
+		alert("123");
+		console.log(123);
+		var a = parseInt("123aa");
+		var s = Math.pow(10,4);
+		*/
+		
+		//求圆的面积
+		function circleArea(r){
+			return Math.PI*r*r;
+		}
+		
+		
+		var s = circleArea(10);
+		
+		console.log(s);
+		
+		//编写一个函数，计算两个数字的和差积商
+		
+		function cal(x,y,op){
+			switch(op){
+				case "+" : return x+y;
+				case "-" : return x-y;
+				case "*" : return x*y;
+				case "/" : return x/y;
+				default : alert("小伙子，你参数写错了！");
+			}
+		}
+		
+		var s = cal(20,10, "/");
+		console.log(s);
+	</script>
+	
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+	
+	<script>
+		/*
+		u                            0  ----                  1
+		uu                          1  ----                  2
+		uuu                        2  ----                  3
+		uuuu                      3  ----                  4                        
+		uuuuu                    4  ----                  5
+		uuuuuu                  5  ----                  6
+		uuuuuuu                6  ----                  7
+		uuuuuuuu    
+		*/
+		
+		for(var i=0; i<8; i++){
+			for(var j=0; j<6; j++){
+				document.write("u");
+			}
+			document.write("<br>");
+		}
+		
+		
+		for(var i=0; i<8; i++){
+			for(var j=0; j<i+1; j++){
+				document.write("u");
+			}
+			document.write("<br>");
+		}
+		
+		
+		/*                 行              空格            字符数
+		   u               0               8               1   
+          uu               1               7               2
+         uuu               2               6               3
+        uuuu               3               5               4               
+       uuuuu               4               4               5
+      uuuuuu               5               3               6
+	 uuuuuuu               6               2               7
+	uuuuuuuu               7               1               8
+	                       i              8-i              i+1
+	*/
+		for(var i=0; i<8; i++){
+			for(var j=0; j<8-i; j++){
+				document.write("#");
+			}
+			for(var k=0; k<i+1; k++){
+				document.write("u");
+			}
+			document.write("<br>");
+		}
+		
+	</script>
+	
+</html>

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+#top_bar,#nav_1,#banner,.hot_news{width:960px; margin:0  auto;}/*群组选择器，将拥有共同声明的选择器通过","的方式组成一组*/
+#top_bar{height:110px; background:gray;}
+#nav_1{ height:54px; background:blue;}
+#banner{height:380px; background:pink;}/*ID选择器，具有唯一性*/
+.hot_news{height:234px; background:#FF9;}/*class/类选择器，定义一类样式*/
+
+/*层级选择器*/
+div.list a{color:#d00;}/*后代选择器，选择的所有后代元素*/
+.list>a{color:#000;}/*子选择器，选择直接的子元素*/
+.list{}
+
+p.list{width:100px; height:100px; background:blue;}
+
+p.list+a{background:yellow;}/*相邻兄弟选择器*/
+
+p.list~a{background:green;}/*通用选择器*/

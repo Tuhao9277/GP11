@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	
+	<script>
+		//最大公约数
+		function f(m,n){
+			var r = m%n;
+			m = n;
+			n = r;
+			if(r != 0){
+				return f(m,n);
+			} 
+			return m;
+		}
+		
+		//12 , 18 ====> 6
+		//6 ，9  ===> 3
+		function m(x,y) {
+			if(x%2==0 && y%2==0){
+				x /= 2;
+				y /= 2;
+				return 2*m(x,y);
+			} else {
+				var cha = Math.abs( x - y );
+				if( cha == Math.min(x,y) ){
+					return cha;
+				} else {
+					return m(cha, Math.min(x,y));
+				}
+			}
+		}
+		
+	</script>
+	
+</html>

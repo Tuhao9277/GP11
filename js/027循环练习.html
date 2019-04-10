@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+	
+	<script>
+		// 打印100以内所有偶数的和
+		var sum = 0;
+		//方法1
+		for(var i=1; i<=100; i++){
+			if(i%2==0) sum+=i;
+		}
+		console.log(sum);
+		//方法2
+		for(var i=2; i<=100; i+=2){
+			sum+=i;
+		}
+		
+		console.log(sum);
+		
+		
+		//计算100的阶乘   100!  == 100*99*98*97.....1
+		
+		var res = 1;
+		for(var i=100; i>0; i--){
+			res *= i;
+			//等价于  res = res*i;
+		}
+		
+		//输出100-200之间所有的素数(质数)
+		for(var i=100; i<=200; i++) {
+			var isPrimeNumber = true;  //假定是一个素数
+			
+			for(var j=2; j<i; j++){
+				if(i%j==0) {
+					isPrimeNumber=false;
+					break;
+				}
+			}
+			if(isPrimeNumber) {
+				console.log("数字"+i+"是一个素数");
+			}
+			
+		}
+		
+		
+		
+	</script>
+	
+</html>
